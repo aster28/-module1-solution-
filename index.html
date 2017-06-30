@@ -1,9 +1,39 @@
+
 <!doctype html> 
  <html lang="en"> 
    <head> 
     <title>Lunch Checker</title> 
      <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script>
+     
+     (function(){
+ use strict;
+ angular.module( 'LunchCheck' ,[])
+   
+.controller(' LunchCheckController ',function($scope){
+  $scope.check = function(){
+    var arr =  $scope.user.split(',');
+    var deep = arr.length;
+    if (deep <=3){
+      $scope.user="Enjoy";
+    
+    }elif(deep>3){
+    
+      $scope.user="Too much!";
+    }elif(deep=""){
+    
+      $scope.user="Please enter data first";
+    }
+    
+     
+  }
+})
+
+
+})();
+
+    </script>
     <script src="app.js"></script>
      <link rel="stylesheet" href="styles/bootstrap.min.css"> 
      <style> 
