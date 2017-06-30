@@ -1,4 +1,4 @@
- 
+
 
 <!doctype html> 
  <html lang="en"> 
@@ -20,13 +20,14 @@
           <div class="form-group"> 
               <input id="lunch-menu" type="text" 
               placeholder="list comma separated dishes you usually have for lunch" 
-              class="form-control" ng-model ="dish"> 
+              class="form-control" ng-model ="user.dish"> 
           </div> 
           <div class="form-group"> 
-              <button class="btn btn-default">Check If Too Much</button> 
+              <button ng-click="check()"> class="btn btn-default">Check If Too Much</button> 
           </div> 
           <div class="form-group message"> 
             <!-- Your message can go here. --> 
+                 {{user}}
              
           </div> 
         {{dish}}
