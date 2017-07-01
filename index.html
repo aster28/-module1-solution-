@@ -12,32 +12,36 @@
    
        
    </head> 
- <body ng-app=" LunchCheck "> 
-    <div class="container"> 
-      <h1>Lunch Checker</h1> 
- 
-       <div ng-controller="LunchCheckController ">
-          <div class="form-group"> 
-              <input id="lunch-menu" type="text" 
-              placeholder="list comma separated dishes you usually have for lunch" 
-              class="form-control" ng-model ="user.message"> 
-          </div> 
-          <div class="form-group"> 
-              <button ng-click="check()" class="btn btn-default">Check If Too Much</button> 
-          </div> 
-          <div class="form-group message"> 
-            <!-- Your message can go here. --> 
-                 {{user}}
-             
-          </div> 
-       
-     </div>
-    </div> 
-  <script>
-     
-     (function(){
 
+ <body ng-app="LunchCheck">
+   <div class="container">
+     <div ng-controller="LunchCheckController"> 
+        <div class="form-group">
+            <h1>Lunch Checker</h1> 
  
+
+           <input type="text" id="lunch-menu" placeholder="list-seperated commas" ng-model="user.message"><br>
+        </div>
+  
+    <div class="form-group">
+<button ng-click="check()">check</button>
+
+    </div>
+    <div class="form-group message" >
+        <p>{{user}}</p>
+    
+    
+    </div>
+    
+    
+    </div>
+ 
+</div>
+  
+
+
+
+<script>
 angular.module('LunchCheck',[]).controller('LunchCheckController', function($scope){
 $scope.user= {
   message : ''
@@ -55,11 +59,7 @@ $scope.check = function() {
 };
 $scope.check();
 })
-})();
-
-    </script>
-    
- 
+</script> 
  </body> 
  </html> 
 
