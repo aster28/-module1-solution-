@@ -39,25 +39,7 @@
 
 
 <script>
-angular.module('LunchCheck',[]).controller('LunchCheckController', function($scope){
-$scope.user= {
-  message : ''
-};
-
-$scope.check = function() {
-    var arr = $scope.user.message.split(',');
-    if (arr == ''){
-        $scope.user.message="Please enter data first"
-    }else if (arr.length>3){
-        $scope.user.message="That's too much"
-    }else if (arr.length <=3){
-      $scope.user.message="Enjoy"
-    }
-
-
-};
-$scope.check();
-})
+!function(){"use strict";angular.module("LunchCheck",[]).controller("LunchCheckController",function(e){e.user={message:""},e.check=function(){var s=e.user.message.split(",");""==s?e.user.message="Please enter data first":s.length>3?e.user.message="That's too much":s.length<=3&&(e.user.message="Enjoy")},e.check()})}();
 </script> 
  </body> 
  </html> 
