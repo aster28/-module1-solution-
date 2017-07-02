@@ -39,7 +39,7 @@
 
 
 <script>
- !function(){"use strict";function e(e){e.user={message:""},e.check=function(){var s=e.user.message.split(",");""==s?e.user.message="Please enter data first":s.length>3?e.user.message="That's too much":s.length<=3&&(e.user.message="Enjoy")},e.check()}angular.module("LunchCheck",[]).controller("LunchCheckController",[e])}();
+!function(){"use strict";function e(e){e.user={message:""},e.check=function(){var s=e.user.message.split(",");""==s?e.user.message="Please enter data first":s.length>3?e.user.message="That's too much":s.length<=3&&(e.user.message="Enjoy")},e.check()}angular.module("LunchCheck",[]).controller("LunchCheckController",["$scope",e])}();
   </script>
  </body> 
  </html> 
