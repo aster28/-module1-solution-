@@ -18,14 +18,14 @@
             <h1>Lunch Checker</h1> 
  
 
-           <input type="text" id="lunch-menu" ng-model="user.message" placeholder="list-seperated commas" ><br>        </div>
+           <input type="text" id="lunch-menu" ng-model="dish" placeholder="list-seperated commas" ><br>        </div>
   
     <div class="form-group">
 <button ng-click="check()">Check If Too Much</button>
 
     </div>
     <div  class="form-group message" >
-        <p>{{user}}</p>
+        <p>{{msg}}</p>
     
     
     </div>
@@ -39,7 +39,7 @@
 
 
 <script>
-!function(){"use strict";function e(e){e.user={message:""},e.check=function(){var s=e.user.message.split(",");""==s?e.user.message="Please enter data first":s.length>3?e.user.message="That's too much":s.length<=3&&(e.user.message="Enjoy")},e.check()}angular.module("LunchCheck",[]).controller("LunchCheckController",["$scope",e])}();
+!function(){"use strict";function s(s){s.dish="",s.msg="",s.check=function(){if(""!=s.dish){var n=s.dish.split(",");n.length>3?s.msg="That's Too Much!":s.msg="Enjoy!"}else s.msg="Please Enter data first"}}angular.module("assignment1",[]).controller("LunchCheckController",["$scope",s])}();
   </script>
  </body> 
  </html> 
